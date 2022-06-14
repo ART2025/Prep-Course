@@ -83,6 +83,8 @@ function tienenMismaLongitud(str1, str2) {
 }
 
 function menosQueNoventa(num) {
+  if (num<90){return true;}
+  return false;
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
@@ -90,6 +92,8 @@ function menosQueNoventa(num) {
 }
 
 function mayorQueCincuenta(num) {
+  if (num>50){return true;}
+  return false;
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
@@ -97,12 +101,15 @@ function mayorQueCincuenta(num) {
 }
 
 function obtenerResto(x, y) {
+  return (x%y)
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
   
 }
 
 function esPar(num) {
+  if (num%2===0){return true}
+  return false
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
@@ -110,6 +117,8 @@ function esPar(num) {
 }
 
 function esImpar(num) {
+  if (num%2===1){return true}
+  return false
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
