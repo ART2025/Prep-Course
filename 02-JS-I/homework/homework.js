@@ -126,6 +126,7 @@ function esImpar(num) {
 }
 
 function elevarAlCuadrado(num) {
+  return Math.pow (num,2)
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
@@ -133,36 +134,45 @@ function elevarAlCuadrado(num) {
 }
 
 function elevarAlCubo(num) {
+  return Math.pow (num,3)
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
   
 }
 
 function elevar(num, exponent) {
+  return Math.pow (num,exponent)
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
   
 }
 
 function redondearNumero(num) {
+  return Math.round (num)
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
   
 }
 
 function redondearHaciaArriba(num) {
+  return Math.ceil (num)
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
   
 }
 
 function numeroRandom() {
+  return Math.random ()
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
   
 }
 
 function esPositivo(numero) {
+  if (numero>0){return "Es positivo"}
+  else if (numero<0) {return "Es negativo"}
+  else if (numero===0) return false;
+  
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
@@ -171,12 +181,15 @@ function esPositivo(numero) {
 }
 
 function agregarSimboloExclamacion(str) {
+  var nuevaString=str+"!"
+  return nuevaString;
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
 }
 
-function combinarNombres(nombre, apellido) {
+function combinarNombres(nombre, apellido){
+return nombre + " " + apellido;
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
@@ -184,6 +197,7 @@ function combinarNombres(nombre, apellido) {
 }
 
 function obtenerSaludo(nombre) {
+  return "Hola "+ nombre +"!";
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
