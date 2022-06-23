@@ -205,6 +205,7 @@ function obtenerSaludo(nombre) {
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
+  return (alto*ancho)
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
   
@@ -212,6 +213,7 @@ function obtenerAreaRectangulo(alto, ancho) {
 
 
 function retornarPerimetro(lado){
+  return lado * 4
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
   
@@ -219,6 +221,7 @@ function retornarPerimetro(lado){
 
 
 function areaDelTriangulo(base, altura){
+  return base * altura/2
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
 
@@ -226,6 +229,7 @@ function areaDelTriangulo(base, altura){
 
 
 function deEuroAdolar(euro){
+  return euro * 1.2
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
@@ -234,6 +238,9 @@ function deEuroAdolar(euro){
 
 
 function esVocal(letra){
+  if (letra==="a" || letra==="e" || letra==="i" || letra==="o" || letra==="u"){return "Es vocal"}
+  else if(letra.length>1){return "Dato incorrecto"}
+  else return "Dato incorrecto"
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
   //Verificar si el usuario ingresó un string de más de un carácter, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
