@@ -43,6 +43,19 @@ function saludo(idioma) {
 }
 
 function colors(color) {
+  switch (color) {
+    case "blue":
+      return "This is blue"
+    case "red":
+      return "This is red"
+    case "green":
+      return "This is green"
+    case "orange":
+      return "This is orange"
+    default:
+      return "Color not found"
+      
+  }
   //La función recibe un color. Devolver el string correspondiente:
   //En caso que el color recibido sea "blue", devuleve --> "This is blue"
   //En caso que el color recibido sea "red", devuleve --> "This is red"
@@ -52,19 +65,26 @@ function colors(color) {
   //Usar el statement Switch.
 }
 
-function esDiezOCinco(numero) {
+function esDiezOCinco(numero){
+  if (numero===10 || numero===5){return true}
+  return false
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
-function estaEnRango(numero) {
+function estaEnRango(numero){
+  if (numero>20 && numero<50){return true};
+  return false;
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
 function esEntero(numero) {
+  if (Math.floor(numero)){return true}
+  else if (numero===0){return true}
+  return false
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
   // Ejemplo: 1 -> true
@@ -74,7 +94,12 @@ function esEntero(numero) {
   // Tu código:
 }
 
-function fizzBuzz(numero) {
+function fizzBuzz(numero){
+  if (numero%3===0 && numero%5===0){return "fizzbuzz"}
+  else if (numero%3===0){return "fizz"}
+  else if (numero%5===0){return "buzz"}
+  return (numero)
+
   // Si "numero" es divisible entre 3, devuelve "fizz"
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
@@ -82,6 +107,13 @@ function fizzBuzz(numero) {
 }
 
 function operadoresLogicos(num1, num2, num3) {
+  
+  if (num1===0||num2===0||num3===0){return "Error"}
+  else if (num1<0||num2<0||num3<0){return "Hay negativos"}
+  else if (num1>num2&&num1>num3&&num1>0){return "Número 1 es mayor y positivo"}
+  else if (num3>num1&&num3>num2){return num3+1}
+  else return false
+
   //La función recibe tres números distintos. 
   //Si num1 es mayor a num2 y a num3 y además es positivo, retornar ---> "Número 1 es mayor y positivo"
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
@@ -90,7 +122,11 @@ function operadoresLogicos(num1, num2, num3) {
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
 }
 
-function esPrimo(numero) {
+function esPrimo(numero){
+  if (numero ===0 || numero ===1 ||numero ===4) return false
+for (let x =2; x < numero/2 ; x++)
+if (numero % x ===0) return false
+return true
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
@@ -99,6 +135,8 @@ function esPrimo(numero) {
 }
 
 function esVerdadero(valor){
+  if (valor===true){return "Soy verdadero"}
+  else if (valor===false){return "Soy falso"}
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
@@ -106,6 +144,12 @@ function esVerdadero(valor){
 }
 
 function tablaDelSeis(){
+let tablaDelSeis = [];
+for (let i=0; i<=60 ;i++)
+if (i%6==0)
+tablaDelSeis.push(i)
+return tablaDelSeis
+
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
@@ -113,12 +157,19 @@ function tablaDelSeis(){
 }
 
 function tieneTresDigitos(numero){
+  if (Math.floor(numero<=999&&numero>99)){return true}
+  return false
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   
 }
 
 function doWhile(numero) {
+  let numero =" "
+  let i = 0
+  do { i = i+5 ; numero = numero + 5} 
+  while (i<9)
+  return numero
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
