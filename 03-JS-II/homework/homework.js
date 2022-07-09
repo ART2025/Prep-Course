@@ -165,11 +165,12 @@ function tieneTresDigitos(numero){
 }
 
 function doWhile(numero) {
-  let numero =" "
-  let i = 0
-  do { i = i+5 ; numero = numero + 5} 
-  while (i<9)
-  return numero
+
+  let i = 0;
+  let valorfinal =numero;
+  do {valorfinal += 5;i++} 
+  while (i<8);
+  return valorfinal;
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
